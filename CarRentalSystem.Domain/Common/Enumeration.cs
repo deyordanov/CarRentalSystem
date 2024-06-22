@@ -1,11 +1,11 @@
 ﻿namespace CarRentalSystem.Domain.Common;
 
+using CarRentalSystem.Domain.Exceptions;
 using System.Collections.Concurrent;
 using System.Reflection;
 
 public abstract class Enumeration : IComparable
 {
-    private static readonly string ExceptionMessage = "'{0}' is not a valid {1} in {2}.";
     private static readonly ConcurrentDictionary<Type, IEnumerable<object>> EnumerationCache =
         new ConcurrentDictionary<Type, IEnumerable<object>>();
 
@@ -53,7 +53,7 @@ public abstract class Enumeration : IComparable
 
         if (matchedItem is null)
         {
-            throw new InvalidOperationException(string.Format(ExceptionMessage, value, description, typeof(T)));
+            throw new InvalidOperationException(string.Format(ExceptionConstants.Enumeration.InvalidEnumerationExceptionMessage, value, description, typeof(T)));
         }
 
         return matchedItem;

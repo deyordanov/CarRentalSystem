@@ -5,12 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6038b300-5017-4f48-acb2-9f7e121ce46c" name="Changes" comment="Added a base domain exception.">
-      <change afterPath="$PROJECT_DIR$/CarRentalSystem.Domain/Common/ValueObject.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CarRentalSystem.Domain/Common/Guard.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CarRentalSystem.Domain/Exceptions/ExceptionConstants.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CarRentalSystem.Domain/Models/ModelConstants.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CarRentalSystem/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CarRentalSystem/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CarRentalSystem.Domain/Common/Entity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CarRentalSystem.Domain/Common/Entity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarRentalSystem.Domain/CarRentalSystem.Domain.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/CarRentalSystem.Domain/CarRentalSystem.Domain.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CarRentalSystem.Domain/Common/Enumeration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CarRentalSystem.Domain/Common/Enumeration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CarRentalSystem.Domain/obj/Debug/net8.0/CarRentalSystem.Domain.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CarRentalSystem.Domain/obj/Debug/net8.0/CarRentalSystem.Domain.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CarRentalSystem.Domain/obj/Debug/net8.0/CarRentalSystem.Domain.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/CarRentalSystem.Domain/obj/Debug/net8.0/CarRentalSystem.Domain.AssemblyInfoInputs.cache" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +42,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.keymap",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -62,7 +62,7 @@
       <option name="presentableId" value="Default" />
       <updated>1719072751887</updated>
       <workItem from="1719072752525" duration="4916000" />
-      <workItem from="1719085216487" duration="1363000" />
+      <workItem from="1719085216487" duration="3536000" />
     </task>
     <task id="LOCAL-00001" summary="Added a base domain exception.">
       <option name="closed" value="true" />
