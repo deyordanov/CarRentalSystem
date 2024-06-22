@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6038b300-5017-4f48-acb2-9f7e121ce46c" name="Changes" comment="Added a base domain exception.">
-      <change afterPath="$PROJECT_DIR$/CarRentalSystem.Domain/Common/Entity.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CarRentalSystem.Domain/Common/Enumeration.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CarRentalSystem/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CarRentalSystem/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CarRentalSystem.Domain/CarRentalSystem.Domain.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/CarRentalSystem.Domain/CarRentalSystem.Domain.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +15,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/3b8b000a0e115700b18265d8ec8c6307056dc94d/src/libraries/System.Private.CoreLib/src/System/Reflection/FieldInfo.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo"><![CDATA[{
@@ -36,6 +38,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.sourceCode.C#",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -54,7 +57,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1719072751887</updated>
-      <workItem from="1719072752525" duration="1561000" />
+      <workItem from="1719072752525" duration="4916000" />
     </task>
     <task id="LOCAL-00001" summary="Added a base domain exception.">
       <option name="closed" value="true" />
@@ -87,5 +90,9 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Added a base domain exception." />
     <option name="LAST_COMMIT_MESSAGE" value="Added a base domain exception." />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
