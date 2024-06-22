@@ -5,29 +5,29 @@ public abstract class Entity<TId>
 {
     public TId Id { get; private set; } = default;
 
-    public override bool Equals(object? obj)
+    public override bool Equals(object? other)
     {
-        if (!(obj is Entity<TId> other))
+        if (!(other is Entity<TId> entity))
         {
             return false;
         }
 
-        if (ReferenceEquals(this, other))
+        if (ReferenceEquals(this, entity))
         {
             return true;
         }
 
-        if (this.GetType() != other.GetType())
+        if (this.GetType() != entity.GetType())
         {
             return false;
         }
         
-        if(this.Id.Equals(default) || other.Id.Equals(default))
+        if(this.Id.Equals(default) || entity.Id.Equals(default))
         {
             return false;
         }
 
-        return this.Id.Equals(other.Id);
+        return this.Id.Equals(entity.Id);
     }
     
     public static bool operator ==(Entity<TId>? first, Entity<TId>? second)

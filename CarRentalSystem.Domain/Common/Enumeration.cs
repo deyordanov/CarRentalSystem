@@ -62,15 +62,15 @@ public abstract class Enumeration : IComparable
     public override string ToString()
         => this.Name;
 
-    public override bool Equals(object? obj)
+    public override bool Equals(object? other)
     {
-        if (!(obj is Enumeration other))
+        if (!(other is Enumeration entity))
         {
             return false;
         }
 
-        var typesMatch = this.GetType() == obj.GetType();
-        var valuesMatch = this.Value == other.Value;
+        var typesMatch = this.GetType() == other.GetType();
+        var valuesMatch = this.Value == entity.Value;
 
         return typesMatch && valuesMatch;
     }
