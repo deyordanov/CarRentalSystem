@@ -29,7 +29,7 @@ public class PhoneNumber : ValueObject
         Guard.ForStringLength<InvalidPhoneNumberException>(
             number,
             MinimumPhoneNumberLength,
-            MinimumPhoneNumberLength,
+            MaximumPhoneNumberLength,
             nameof(PhoneNumber)
             );
         
