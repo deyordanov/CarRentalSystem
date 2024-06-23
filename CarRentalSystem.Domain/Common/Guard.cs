@@ -27,7 +27,7 @@ public static class Guard
     {
         var length = value.Length;
 
-        if (length >= maximumLength && length <= maximumLength)
+        if (length >= minimumLength && length <= maximumLength)
         {
             return;
         }
