@@ -1,7 +1,11 @@
 ﻿namespace CarRentalSystem.Domain.Common;
 
+using System.Text.RegularExpressions;
+
 using CarRentalSystem.Domain.Exceptions;
 using CarRentalSystem.Domain.Models;
+
+using static Exceptions.ExceptionConstants.Guard;
 
 public static class Guard
 {
@@ -15,7 +19,7 @@ public static class Guard
             return;
         }
         
-        ThrowException<TException>(string.Format(ExceptionConstants.Guard.GuardAgainstEmptyStringExceptionMessage, name));
+        ThrowException<TException>(string.Format(GuardAgainstEmptyStringExceptionMessage, name));
     }
 
     public static void ForStringLength<TException>(string value, int minimumLength, int maximumLength, string name = Value)
@@ -28,7 +32,7 @@ public static class Guard
             return;
         }
         
-        ThrowException<TException>(string.Format(ExceptionConstants.Guard.GuardForStringLengthExceptionMessage, name, minimumLength, maximumLength));
+        ThrowException<TException>(string.Format(GuardForStringLengthExceptionMessage, name, minimumLength, maximumLength));
     }
 
     public static void AgainstOutOfRange<TException>(int number, int minimum, int maximum, string name = Value)
@@ -39,7 +43,7 @@ public static class Guard
             return;
         }
         
-        ThrowException<TException>(string.Format(ExceptionConstants.Guard.GuardAgainstOutOfRangeExceptionMessage, name, minimum, maximum));
+        ThrowException<TException>(string.Format(GuardAgainstOutOfRangeExceptionMessage, name, minimum, maximum));
     }
     
     public static void AgainstOutOfRange<TException>(decimal number, decimal minimum, decimal maximum, string name = Value)
@@ -50,19 +54,30 @@ public static class Guard
             return;
         }
         
-        ThrowException<TException>(string.Format(ExceptionConstants.Guard.GuardAgainstOutOfRangeExceptionMessage, name, minimum, maximum));
+        ThrowException<TException>(string.Format(GuardAgainstOutOfRangeExceptionMessage, name, minimum, maximum));
     }
 
     public static void ForValidUrl<TException>(string url, string name = Value)
         where TException : BaseDomainException, new()
     {
-        if (url.Length <= ModelConstants.Common.MaxUrlLength &&
+        if (url.Length <= ModelConstants.Common.MaximumUrlLength &&
             Uri.IsWellFormedUriString(url, UriKind.Absolute))
         {
             return;
         }
         
-        ThrowException<TException>(string.Format(ExceptionConstants.Guard.GuardForValidUrlExceptionMessage, name));
+        ThrowException<TException>(string.Format(GuardForValidUrlExceptionMessage, name));
+    }
+
+    public static void ForRegularExpression<TException>(string value, string regularExpression, string name = Value)
+        where TException : BaseDomainException, new()
+    {
+        if (Regex.IsMatch(value, regularExpression))
+        {
+            return;
+        }
+        
+        ThrowException<TException>(string.Format(GuardForRegularExpressionExceptionMessage, name, regularExpression));
     }
 
     public static void Against<TException>(object actualValue, object unexpectedValue, string name = Value)
@@ -73,7 +88,7 @@ public static class Guard
             return;
         }
         
-        ThrowException<TException>(string.Format(ExceptionConstants.Guard.GuardAgainstExceptionMessage, name, unexpectedValue));
+        ThrowException<TException>(string.Format(GuardAgainstExceptionMessage, name, unexpectedValue));
     }
     
     private static void ThrowException<TException>(string message)

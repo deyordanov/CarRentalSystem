@@ -1,8 +1,9 @@
 ﻿namespace CarRentalSystem.Domain.Common;
 
-using CarRentalSystem.Domain.Exceptions;
 using System.Collections.Concurrent;
 using System.Reflection;
+
+using static Exceptions.ExceptionConstants.Enumeration;
 
 public abstract class Enumeration : IComparable
 {
@@ -53,7 +54,7 @@ public abstract class Enumeration : IComparable
 
         if (matchedItem is null)
         {
-            throw new InvalidOperationException(string.Format(ExceptionConstants.Enumeration.InvalidEnumerationExceptionMessage, value, description, typeof(T)));
+            throw new InvalidOperationException(string.Format(InvalidEnumerationExceptionMessage, value, description, typeof(T)));
         }
 
         return matchedItem;

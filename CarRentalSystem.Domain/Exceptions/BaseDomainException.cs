@@ -1,6 +1,6 @@
 ﻿namespace CarRentalSystem.Domain.Exceptions;
 
-public class BaseDomainException : Exception
+public abstract class BaseDomainException : Exception
 {
     private string? message;
 
