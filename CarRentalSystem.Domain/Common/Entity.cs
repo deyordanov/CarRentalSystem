@@ -22,7 +22,7 @@ public abstract class Entity<TId>
             return false;
         }
         
-        if(this.Id.Equals(default) || entity.Id.Equals(default))
+        if(this.Id.Equals(default(int)) || entity.Id.Equals(default(int)))
         {
             return false;
         }
