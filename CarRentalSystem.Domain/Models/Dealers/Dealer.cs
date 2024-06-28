@@ -10,6 +10,16 @@ public class Dealer : Entity<int>, IAggregateRoot
 {
     private readonly HashSet<CarAd> carAds;
 
+    private Dealer(
+        string name)
+    {
+        this.Name = name;
+        
+        this.PhoneNumber = null!;
+
+        this.carAds = new HashSet<CarAd>();
+    }
+    
     public Dealer(
         string name,
         string phoneNumber)

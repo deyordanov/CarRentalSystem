@@ -8,6 +8,22 @@ using static ModelConstants.CarAd;
 
 public class CarAd : Entity<int>, IAggregateRoot
 {
+    private CarAd(
+        string model,
+        string image,
+        decimal pricePerDay,
+        bool isAvailable)
+    {
+        this.Model = model;
+        this.Image = image;
+        this.PricePerDay = pricePerDay;
+        this.IsAvailable = isAvailable;
+
+        this.Manufacturer = null!;
+        this.Category = null!;
+        this.Options = null!;
+    }
+    
     public CarAd(
         Manufacturer manufacturer,
         string model,

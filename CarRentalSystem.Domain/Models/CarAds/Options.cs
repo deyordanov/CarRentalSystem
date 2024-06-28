@@ -7,6 +7,16 @@ using static ModelConstants.Options;
 
 public class Options : ValueObject
 {
+    private Options(
+        bool hasClimateControl,
+        int numberOfSeats)
+    {
+        this.HasClimateControl = hasClimateControl;
+        this.NumberOfSeats = numberOfSeats;
+
+        this.TransmissionType = null!;
+    }
+    
     internal Options(
         bool hasClimateControl,
         int numberOfSeats,
@@ -14,12 +24,12 @@ public class Options : ValueObject
     {
         this.Validate(numberOfSeats);
         
-        this.ClimateControl = hasClimateControl;
+        this.HasClimateControl = hasClimateControl;
         this.NumberOfSeats = numberOfSeats;
         this.TransmissionType = transmissionType;
     }
     
-    public bool ClimateControl { get; }
+    public bool HasClimateControl { get; }
 
     public int NumberOfSeats { get; }
 

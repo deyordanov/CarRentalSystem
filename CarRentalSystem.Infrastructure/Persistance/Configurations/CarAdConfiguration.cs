@@ -49,7 +49,7 @@ public class CarAdConfiguration : IEntityTypeConfiguration<CarAd>
                 o.WithOwner();
 
                 o.Property(op => op.NumberOfSeats);
-                o.Property(op => op.ClimateControl);
+                o.Property(op => op.HasClimateControl);
 
                 o.OwnsOne(op => op.TransmissionType, tt =>
                 {
