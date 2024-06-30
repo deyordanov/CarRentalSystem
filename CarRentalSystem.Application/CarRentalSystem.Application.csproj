@@ -17,4 +17,8 @@
       <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Common\" />
+    </ItemGroup>
+
 </Project>

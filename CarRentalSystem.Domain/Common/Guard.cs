@@ -5,7 +5,7 @@ using System.Text.RegularExpressions;
 using CarRentalSystem.Domain.Exceptions;
 using CarRentalSystem.Domain.Models;
 
-using static Exceptions.ExceptionConstants.Guard;
+using static Exceptions.DomainExceptionConstants.GuardExceptionMessages;
 
 public static class Guard
 {

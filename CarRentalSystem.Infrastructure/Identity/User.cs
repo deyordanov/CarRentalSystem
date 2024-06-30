@@ -5,7 +5,7 @@ using CarRentalSystem.Domain.Models.Dealers;
 
 using Microsoft.AspNetCore.Identity;
 
-using static Domain.Exceptions.ExceptionConstants.Dealer;
+using static Domain.Exceptions.DomainExceptionConstants.DealerExceptionMessages;
 
 public sealed class User : IdentityUser
 {

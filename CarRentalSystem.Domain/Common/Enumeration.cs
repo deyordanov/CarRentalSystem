@@ -3,7 +3,7 @@
 using System.Collections.Concurrent;
 using System.Reflection;
 
-using static Exceptions.ExceptionConstants.Enumeration;
+using static Exceptions.DomainExceptionConstants.EnumerationExceptionMessages;
 
 public abstract class Enumeration : IComparable
 {

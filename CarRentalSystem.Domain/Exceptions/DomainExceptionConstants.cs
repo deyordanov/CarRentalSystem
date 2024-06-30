@@ -1,8 +1,8 @@
 ﻿namespace CarRentalSystem.Domain.Exceptions;
 
-public static class ExceptionConstants
+public static class DomainExceptionConstants
 {
-    public static class Guard
+    public static class GuardExceptionMessages
     {
         public const string GuardAgainstEmptyStringExceptionMessage = "{0} cannot be null or empty.";
         public const string GuardForStringLengthExceptionMessage = "{0} must be between {1} and {2} symbols.";
@@ -12,12 +12,12 @@ public static class ExceptionConstants
         public const string GuardAgainstExceptionMessage = "{0} must not be {1}.";
     }
 
-    public static class Enumeration
+    public static class EnumerationExceptionMessages
     {
         public const string InvalidEnumerationExceptionMessage = "'{0}' is not a valid {1} in {2}.";
     }
 
-    public static class Dealer
+    public static class DealerExceptionMessages
     {
         public const string UserIsAlreadyADealer = "User '{0}' is already a dealer.";
     }
