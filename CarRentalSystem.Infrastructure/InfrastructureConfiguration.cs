@@ -2,6 +2,7 @@
 
 using CarRentalSystem.Application.Contracts;
 using CarRentalSystem.Infrastructure.Persistance;
+using CarRentalSystem.Infrastructure.Persistence;
 using CarRentalSystem.Infrastructure.Persistence.Repositories;
 
 using Microsoft.EntityFrameworkCore;
@@ -19,5 +20,6 @@ public static class InfrastructureConfiguration
                     configuration.GetConnectionString("DefaultConnection"),
                     b => b.MigrationsAssembly(
                         typeof(CarRentalDbContext).Assembly.FullName)))
-            .AddTransient(typeof(IRepository<>), typeof(DataRepository<>));
+            .AddTransient(typeof(IRepository<>), typeof(DataRepository<>))
+            .AddTransient<IInitializer, CarRentalDbInitializer>();
 }

@@ -3,11 +3,11 @@
 using System.Reflection;
 
 using CarRentalSystem.Domain.Models.CarAds;
-using CarRentalSystem.Domain.Models.Dealers;
+using CarRentalSystem.Domain.Models.Dealers;using CarRentalSystem.Infrastructure.Identity;using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 using Microsoft.EntityFrameworkCore;
 
-internal class CarRentalDbContext(DbContextOptions<CarRentalDbContext> options) : DbContext(options)
+public class CarRentalDbContext(DbContextOptions<CarRentalDbContext> options) : IdentityDbContext<User>(options)
 {
     public DbSet<CarAd> CarAds { get; set; } = null!;
 

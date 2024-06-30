@@ -1,4 +1,5 @@
 using CarRentalSystem.Infrastructure;
+using CarRentalSystem.StartUp;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -21,8 +22,13 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.UseRouting();
+
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.Initialize();
 
 app.Run();

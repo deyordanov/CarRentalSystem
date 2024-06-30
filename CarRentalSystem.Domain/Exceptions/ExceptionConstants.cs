@@ -16,4 +16,9 @@ public static class ExceptionConstants
     {
         public const string InvalidEnumerationExceptionMessage = "'{0}' is not a valid {1} in {2}.";
     }
+
+    public static class Dealer
+    {
+        public const string UserIsAlreadyADealer = "User '{0}' is already a dealer.";
+    }
 }
