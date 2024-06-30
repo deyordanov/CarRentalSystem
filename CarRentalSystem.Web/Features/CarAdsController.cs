@@ -1,7 +1,7 @@
 ﻿namespace CarRentalSystem.Web.Features;
 
+using CarRentalSystem.Application.Contracts;
 using CarRentalSystem.Domain.Models.CarAds;
-using CarRentalSystem.Domain.Models.Dealers;
 
 using Microsoft.AspNetCore.Mvc;
 
@@ -9,12 +9,14 @@ using Microsoft.AspNetCore.Mvc;
 [Route("[controller]")]
 public class CarAdsController
 {
-    private static readonly Dealer Dealer
-        = new Dealer("Dealer", "+359893742569");
+    private readonly IRepository<CarAd> carAds;
+
+    public CarAdsController(IRepository<CarAd> carAds)
+        => this.carAds = carAds;
 
     [HttpGet]
-    public IEnumerable<CarAd> Get()
-        => Dealer
-            .CarAds
+    public IEnumerable<CarAd> GetAll()
+        => this.carAds
+            .GetAll()
             .Where(c => c.IsAvailable);
 }

@@ -1,6 +1,8 @@
 ﻿namespace CarRentalSystem.Infrastructure;
 
+using CarRentalSystem.Application.Contracts;
 using CarRentalSystem.Infrastructure.Persistance;
+using CarRentalSystem.Infrastructure.Persistence.Repositories;
 
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -16,5 +18,6 @@ public static class InfrastructureConfiguration
                 .UseSqlServer(
                     configuration.GetConnectionString("DefaultConnection"),
                     b => b.MigrationsAssembly(
-                        typeof(CarRentalDbContext).Assembly.FullName)));
+                        typeof(CarRentalDbContext).Assembly.FullName)))
+            .AddTransient(typeof(IRepository<>), typeof(DataRepository<>));
 }
