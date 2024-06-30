@@ -7,11 +7,11 @@ using CarRentalSystem.Domain.Models.CarAds;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
 
-[ApiController]
-[Route("[controller]")]
+
 public class CarAdsController(
     IRepository<CarAd> carAds,
     IOptions<ApplicationSettings> settings)
+    : BaseController
 {
     [HttpGet]
     public object GetAll()
