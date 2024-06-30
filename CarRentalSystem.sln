@@ -8,6 +8,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarRentalSystem.Web", "CarR
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarRentalSystem.Infrastructure", "CarRentalSystem.Infrastructure\CarRentalSystem.Infrastructure.csproj", "{ACBC8394-F3E9-47F5-BD58-06E593D6DA2B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarRentalSystem.Application", "CarRentalSystem.Application\CarRentalSystem.Application.csproj", "{0098C0EB-09E3-4527-81CB-104310BE2090}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,9 @@ Global
 		{ACBC8394-F3E9-47F5-BD58-06E593D6DA2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ACBC8394-F3E9-47F5-BD58-06E593D6DA2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ACBC8394-F3E9-47F5-BD58-06E593D6DA2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0098C0EB-09E3-4527-81CB-104310BE2090}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0098C0EB-09E3-4527-81CB-104310BE2090}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0098C0EB-09E3-4527-81CB-104310BE2090}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0098C0EB-09E3-4527-81CB-104310BE2090}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

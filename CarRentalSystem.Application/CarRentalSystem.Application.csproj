@@ -7,10 +7,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <FrameworkReference Include="Microsoft.AspNetCore.App" />
+      <ProjectReference Include="..\CarRentalSystem.Domain\CarRentalSystem.Domain.csproj" />
     </ItemGroup>
 
-    <ItemGroup>
-      <ProjectReference Include="..\CarRentalSystem.Application\CarRentalSystem.Application.csproj" />
-    </ItemGroup>
 </Project>
