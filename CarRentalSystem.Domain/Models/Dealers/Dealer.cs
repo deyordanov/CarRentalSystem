@@ -20,7 +20,7 @@ public class Dealer : Entity<int>, IAggregateRoot
         this.carAds = new HashSet<CarAd>();
     }
     
-    public Dealer(
+    internal Dealer(
         string name,
         string phoneNumber)
     {

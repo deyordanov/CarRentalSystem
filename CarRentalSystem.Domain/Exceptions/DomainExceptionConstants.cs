@@ -2,6 +2,11 @@
 
 public static class DomainExceptionConstants
 {
+    public static class CarAdExceptionMessages
+    {
+        public const string CarShouldShouldHaveManufacturerAndCategoryAndOptions = "Manufacturer, category and options must have a valid value.";
+    }
+    
     public static class GuardExceptionMessages
     {
         public const string GuardAgainstEmptyStringExceptionMessage = "{0} cannot be null or empty.";

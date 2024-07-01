@@ -24,7 +24,7 @@ public class CarAd : Entity<int>, IAggregateRoot
         this.Options = null!;
     }
     
-    public CarAd(
+    internal CarAd(
         Manufacturer manufacturer,
         string model,
         Category category,
@@ -33,7 +33,7 @@ public class CarAd : Entity<int>, IAggregateRoot
         Options options,
         bool isAvailable)
     {
-        this.Validate(model, pricePerDay);
+        this.Validate(model, image, pricePerDay);
         
         this.Manufacturer = manufacturer;
         this.Model = model;
@@ -60,13 +60,15 @@ public class CarAd : Entity<int>, IAggregateRoot
 
     public void ChangeAvailability() => this.IsAvailable = !this.IsAvailable;
 
-    private void Validate(string model, decimal pricePerDay)
+    private void Validate(string model, string image, decimal pricePerDay)
     {
         Guard.ForStringLength<InvalidCarAdException>(
             model,
             MinimumModelLength,
             MaximumModelLength,
             nameof(this.Model));
+        
+        Guard.AgainstEmptyString<InvalidCarAdException>(image);
         
         Guard.AgainstOutOfRange<InvalidCarAdException>(
             pricePerDay,
