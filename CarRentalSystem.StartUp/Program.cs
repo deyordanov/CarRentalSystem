@@ -1,4 +1,5 @@
 using CarRentalSystem.Application;
+using CarRentalSystem.Domain;
 using CarRentalSystem.Infrastructure;
 using CarRentalSystem.StartUp;
 using CarRentalSystem.Web;
@@ -12,8 +13,9 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services
     .AddWebComponents()
+    .AddInfrastructure(builder.Configuration)
     .AddApplication(builder.Configuration)
-    .AddInfrastructure(builder.Configuration);
+    .AddDomain();
 
 var app = builder.Build();
 
